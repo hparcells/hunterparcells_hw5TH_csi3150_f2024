@@ -8,9 +8,51 @@
 
     <link rel="stylesheet" href="./global.css" />
 
-    <script src="js/global.js"></script>
+    <script src="./usedCars.js"></script>
   </head>
   <body>
-    <p>Hello world!</p>
+    <section>
+      <div class="filter">
+        <p>Year</p>
+        <input type="text" id="year-min" placeholder="Min. Year" />
+        —
+        <input type="text" id="year-max" placeholder="Max. Year" />
+      </div>
+      <div class="filter">
+        <p>Make</p>
+        <select id="make">
+          <option value="">Select Make</option>
+        </select>
+      </div>
+      <div class="filter">
+        <p>Mileage</p>
+        <input type="text" id="mileage-min" placeholder="Min. Mileage" />
+        —
+        <input type="text" id="mileage-max" placeholder="Max. Mileage" />
+      </div>
+      <div class="filter">
+        <p>Price</p>
+        <input type="text" id="price-min" placeholder="Min. Price" />
+        —
+        <input type="text" id="price-max" placeholder="Max. Price" />
+      </div>
+      <div class="filter">
+        <p>Color</p>
+        <select id="color">
+          <option value="">Select Color</option>
+        </select>
+      </div>
+      <div class="filter">
+        <button onclick="filter()">Filter</button>
+      </div>
+
+      <div id="cars"></div>
+    </section>
+
+    <!-- Scripts after page load. -->
+    <script src="./index.js"></script>
+    <script>
+      onLoad();
+    </script>
   </body>
 </html>

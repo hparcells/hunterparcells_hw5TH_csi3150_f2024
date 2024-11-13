@@ -155,5 +155,3 @@ const usedCars = [
     gasMileage: "23 mpg city, 34 mpg highway",
   },
 ];
-
-module.exports = usedCars;
