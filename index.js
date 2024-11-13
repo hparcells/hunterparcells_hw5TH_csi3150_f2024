@@ -31,15 +31,15 @@ function inputToFilter(string) {
 // ------------------------------
 // HTML Elements
 // ------------------------------
-const yearMinInput = document.querySelector('#year-min');
-const yearMaxInput = document.querySelector('#year-max');
-const makeDropdown = document.querySelector('#make');
-const mileageMinInput = document.querySelector('#mileage-min');
-const mileageMaxInput = document.querySelector('#mileage-max');
-const priceMinInput = document.querySelector('#price-min');
-const priceMaxInput = document.querySelector('#price-max');
-const colorDropdown = document.querySelector('#color');
-const carsDiv = document.querySelector('#cars');
+const yearMinInput = document.querySelector('.year-min');
+const yearMaxInput = document.querySelector('.year-max');
+const makeDropdown = document.querySelector('.make');
+const mileageMinInput = document.querySelector('.mileage-min');
+const mileageMaxInput = document.querySelector('.mileage-max');
+const priceMinInput = document.querySelector('.price-min');
+const priceMaxInput = document.querySelector('.price-max');
+const colorDropdown = document.querySelector('.color');
+const carsDiv = document.querySelector('.cars');
 
 // ------------------------------
 // App Functions

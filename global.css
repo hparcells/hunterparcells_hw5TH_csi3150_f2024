@@ -1,5 +1,7 @@
+/* Imports. */
 @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* Elements. */
 * {
   margin: 0;
   padding: 0;
@@ -8,19 +10,54 @@
   font-family: "Host Grotesk", sans-serif;
   font-optical-sizing: auto;
 }
-
 body {
   padding: 1em;
 
   max-width: 1200px;
   margin: auto;
 }
+select, input, textarea {
+  border: 2px solid #000000;
+  border-radius: 8px;
+  outline: none;
 
+  padding: 4px 8px;
+
+  background: transparent;
+
+  transition: all 0.2s ease-in-out;
+
+  color: #000000;
+}
+select {
+  cursor: pointer;
+}
+input:focus, textarea:focus {
+  border: 2px solid rgba(0, 0, 0, 0.727);
+}
+button {
+  border: none;
+  border-radius: 8px;
+
+  padding: 8px 16px;
+
+  background: #000000;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  opacity: 0.727;
+}
+
+/* Classes. */
 .filter {
   margin-bottom: 1em;
 }
 
-#cars {
+.cars {
   display: flex;
   justify-content: center;
   align-items: center;
