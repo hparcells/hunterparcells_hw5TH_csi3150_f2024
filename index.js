@@ -24,7 +24,8 @@ function inputToFilter(string) {
     return null;
   }
 
-  return parseInt(match[0]);
+  const number = parseInt(match[0]);
+  return number === 0 ? -1 : number;
 }
 
 // ------------------------------
@@ -83,6 +84,8 @@ function filter() {
     color: colorDropdown.value || null
   };
 
+  console.log(filters)
+  
   // Filter results.
   const results = DATA.filter((car) => {
     if(filters.minYear && car.year < filters.minYear) {
@@ -121,5 +124,8 @@ function filter() {
   });
 
   // Display results.
-  carsDiv.innerText = results.map(result => JSON.stringify(result));
+  carsDiv.innerText = '';
+  for(const result of results) {
+    carsDiv.innerText += JSON.stringify(result);
+  }
 }
