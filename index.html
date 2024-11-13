@@ -11,43 +11,45 @@
     <script src="./usedCars.js"></script>
   </head>
   <body>
-    <section>
-      <div class="filter">
-        <span>Year</span>
-        <input type="text" class="year-min" placeholder="Min. Year" />
-        —
-        <input type="text" class="year-max" placeholder="Max. Year" />
-      </div>
-      <div class="filter">
-        <span>Make</span>
-        <select class="make">
-          <option value="">Select Make</option>
-        </select>
-      </div>
-      <div class="filter">
-        <span>Mileage</span>
-        <input type="text" class="mileage-min" placeholder="Min. Mileage" />
-        —
-        <input type="text" class="mileage-max" placeholder="Max. Mileage" />
-      </div>
-      <div class="filter">
-        <span>Price</span>
-        <input type="text" class="price-min" placeholder="Min. Price" />
-        —
-        <input type="text" class="price-max" placeholder="Max. Price" />
-      </div>
-      <div class="filter">
-        <p>Color</p>
-        <select class="color">
-          <option value="">Select Color</option>
-        </select>
-      </div>
-      <div class="filter">
-        <button onclick="filter()">Filter</button>
-      </div>
-
-      <div class="cars"></div>
-    </section>
+    <main>
+      <section>
+        <div class="filter">
+          <span>Year</span>
+          <input type="text" class="year-min" placeholder="Min. Year" />
+          —
+          <input type="text" class="year-max" placeholder="Max. Year" />
+        </div>
+        <div class="filter">
+          <span>Make</span>
+          <select class="make">
+            <option value="">Select Make</option>
+          </select>
+        </div>
+        <div class="filter">
+          <span>Mileage</span>
+          <input type="text" class="mileage-min" placeholder="Min. Mileage" />
+          —
+          <input type="text" class="mileage-max" placeholder="Max. Mileage" />
+        </div>
+        <div class="filter">
+          <span>Price</span>
+          <input type="text" class="price-min" placeholder="Min. Price" />
+          —
+          <input type="text" class="price-max" placeholder="Max. Price" />
+        </div>
+        <div class="filter">
+          <p>Color</p>
+          <select class="color">
+            <option value="">Select Color</option>
+          </select>
+        </div>
+        <div class="filter">
+          <button onclick="filter()">Filter</button>
+        </div>
+  
+        <section class="cars"></section>
+      </section>
+    </main>
 
     <!-- Scripts after page load. -->
     <script src="./index.js"></script>
