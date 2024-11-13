@@ -174,3 +174,5 @@ function filter() {
     carsDiv.append(carDiv);    
   }
 }
+
+filter();
