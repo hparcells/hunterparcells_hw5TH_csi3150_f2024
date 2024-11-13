@@ -84,8 +84,6 @@ function filter() {
     color: colorDropdown.value || null
   };
 
-  console.log(filters)
-  
   // Filter results.
   const results = DATA.filter((car) => {
     if(filters.minYear && car.year < filters.minYear) {
@@ -123,9 +121,56 @@ function filter() {
     return true;
   });
 
+  carsDiv.innerHTML = '';
+
+  if(!results.length) {
+    const error = document.createElement('p');
+    error.classList.add('error');
+    error.innerText = 'No results found.';
+    carsDiv.appendChild(error);
+    
+    return;
+  }
+
   // Display results.
-  carsDiv.innerText = '';
   for(const result of results) {
-    carsDiv.innerText += JSON.stringify(result);
+    const carDiv = document.createElement('div');
+    carDiv.classList.add('car');
+    
+    // Formatted name.
+    const name = `${result.year} ${result.make} ${result.model} (${result.color})`;
+    const carNameParagraph = document.createElement('p');
+    carNameParagraph.classList.add('car-name');
+    carNameParagraph.innerText = name;
+    
+    // Price.
+    const carPriceParagraph = document.createElement('p');
+    carPriceParagraph.classList.add('car-price');
+    carPriceParagraph.innerText = `Starting at `;
+    const carPriceTagSpan = document.createElement('span');
+    carPriceTagSpan.classList.add('car-price-tag');
+    carPriceTagSpan.innerText = `$${result.price}`;
+    carPriceParagraph.appendChild(carPriceTagSpan);
+
+    // Milage.
+    const carMileageParagraph = document.createElement('p');
+    carMileageParagraph.classList.add('car-mileage');
+    carMileageParagraph.innerText = `Mileage: ${result.mileage}`;
+
+    // Gas milage.
+    const carGasMileageParagraph = document.createElement('p');
+    carGasMileageParagraph.classList.add('car-gas-mileage');
+    carGasMileageParagraph.innerText = `Gas Mileage: ${result.gasMileage}`;
+    
+    // Add elements to individual car div.
+    carDiv.append(
+      carNameParagraph,
+      carMileageParagraph,
+      carGasMileageParagraph,
+      carPriceParagraph
+    );
+    
+    // Add entire car div results list.
+    carsDiv.append(carDiv);    
   }
 }
